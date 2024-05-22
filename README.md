@@ -2,7 +2,7 @@
 # VirtualDesktop-AHK
 
 ### Intention
- - We want to use these guys below to facilitate XFCE/Linux-like virtual desktop hotkeys (Alt + 1, Alt + 2, etc...) under Windows
+ - We want to use these guys below to facilitate XFCE/Linux-like virtual desktop hotkeys (Alt + 1, Alt + 2, etc...) under Windows 11
      - https://www.autohotkey.com/
      - https://github.com/MScholtes/VirtualDesktop
  - My initial attempts had some usage nuances around reliable AutoHotkey usage, such as:
