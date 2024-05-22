@@ -1,5 +1,6 @@
 
-VIRTUALDESKTOP_PATH := "C:\Users\jay\_config\VirtualDesktop11.exe"
+; https://github.com/MScholtes/VirtualDesktop
+VIRTUALDESKTOP_PATH := "...\VirtualDesktop11.exe"
 
 SwitchDesktop(n) { 
 	RunWait(VIRTUALDESKTOP_PATH " /Switch:" n,, 'Hide')
