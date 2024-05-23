@@ -4,8 +4,9 @@ VIRTUALDESKTOP_PATH := "...\VirtualDesktop11.exe"
 
 SwitchDesktop(n) { 
 	RunWait(VIRTUALDESKTOP_PATH " /Switch:" n,, 'Hide')
-	Send("{Blind}{Escape}")
+	; Send("{Blind}{Escape}") ;; not necessary?
 }
+
 !1::SwitchDesktop(0)
 !2::SwitchDesktop(1)
 !3::SwitchDesktop(2)
@@ -14,7 +15,7 @@ SwitchDesktop(n) {
 
 MoveActiveWindowToDesktop(n) { 
 	RunWait(VIRTUALDESKTOP_PATH " /GetDesktop:" n " /MoveActiveWindow",, 'Hide')
-	Send("{Escape}")
+	; Send("{Escape}") ;; not necessary?
 }
 ^!1::MoveActiveWindowToDesktop(0)
 ^!2::MoveActiveWindowToDesktop(1)
