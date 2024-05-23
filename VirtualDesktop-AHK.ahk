@@ -4,7 +4,7 @@ VIRTUALDESKTOP_PATH := "...\VirtualDesktop11.exe"
 
 SwitchDesktop(n) { 
 	RunWait(VIRTUALDESKTOP_PATH " /Switch:" n,, 'Hide')
-	; Send("{Blind}{Escape}") ;; not necessary?
+	; Send("{Blind}{Escape}") ;; not necessary? ;; WSL2 guiApplications=False resolved this?
 }
 
 !1::SwitchDesktop(0)
@@ -15,7 +15,7 @@ SwitchDesktop(n) {
 
 MoveActiveWindowToDesktop(n) { 
 	RunWait(VIRTUALDESKTOP_PATH " /GetDesktop:" n " /MoveActiveWindow",, 'Hide')
-	; Send("{Escape}") ;; not necessary?
+	; Send("{Escape}") ;; not necessary? ;; WSL2 guiApplications=False resolved this?
 }
 ^!1::MoveActiveWindowToDesktop(0)
 ^!2::MoveActiveWindowToDesktop(1)
