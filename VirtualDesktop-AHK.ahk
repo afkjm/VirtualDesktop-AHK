@@ -4,7 +4,8 @@ VIRTUALDESKTOP_PATH := "...\VirtualDesktop11.exe"
 
 SwitchDesktop(n) { 
 	RunWait(VIRTUALDESKTOP_PATH " /Switch:" n,, 'Hide')
-	; Send("{Blind}{Escape}") ;; not necessary? ;; WSL2 guiApplications=False resolved this?
+	; For reasons unknown, *sometimes* an Alt+Escape is required to regain focus of the foremost window
+	; Send("{Blind}{Escape}")
 }
 
 !1::SwitchDesktop(0)
@@ -15,7 +16,6 @@ SwitchDesktop(n) {
 
 MoveActiveWindowToDesktop(n) { 
 	RunWait(VIRTUALDESKTOP_PATH " /GetDesktop:" n " /MoveActiveWindow",, 'Hide')
-	; Send("{Escape}") ;; not necessary? ;; WSL2 guiApplications=False resolved this?
 }
 ^!1::MoveActiveWindowToDesktop(0)
 ^!2::MoveActiveWindowToDesktop(1)
